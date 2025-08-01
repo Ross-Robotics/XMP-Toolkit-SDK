@@ -53,6 +53,8 @@
 #include "XMP_Version.h"
 #include "XMP_Const.h"
 
+#include <string>
+
 #if XMP_WinBuild
     #if XMP_DebugBuild
         #pragma warning ( push, 4 )

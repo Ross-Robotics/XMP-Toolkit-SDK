@@ -327,6 +327,9 @@ endif()
 
 set_target_properties(${TARGET_NAME} PROPERTIES OUTPUT_NAME  ${XMPFILES_LIB})
 
+# Turn off all warnings (since its external lib)
+target_compile_options(${TARGET_NAME} PRIVATE -w)
+
 # ==============================================================================
 # Define output for this project
 SetOutputPath(${OUTPUT_DIR} 0)

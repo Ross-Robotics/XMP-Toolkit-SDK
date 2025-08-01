@@ -1,5 +1,4 @@
 # ==============================================================================
-cmake_minimum_required(VERSION 2.8.6)
 
 # Enable folder grouping of projects in IDEs
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
@@ -252,6 +251,9 @@ else(WIN32)
 		set_target_properties(${TARGET_NAME} PROPERTIES XCODE_ATTRIBUTE_GCC_SYMBOLS_PRIVATE_EXTERN "YES")
 	endif()
 endif()
+
+# Turn off all warnings (since its external lib)
+target_compile_options(${TARGET_NAME} PRIVATE -w)
 
 # ==============================================================================
 # Define output
