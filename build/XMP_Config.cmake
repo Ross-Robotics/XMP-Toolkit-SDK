@@ -36,5 +36,11 @@ else (INCLUDE_CPP_DOM_SOURCE)
 	add_definitions(-DENABLE_CPP_DOM_MODEL=0)
 endif(INCLUDE_CPP_DOM_SOURCE)
 
+# Ensure Expat general entities and DTD support are enabled
+add_definitions(-DXML_DTD=1 -DXML_GE=1)
+
 include(${XMP_ROOT}/build/XMP_ConfigCommon.cmake)
+# Remove libssp linkage and custom GCC lib path from XMP Toolkit
+set(XMP_PLATFORM_LINK "")
+set(XMP_GCC_LIBPATH "")
 

@@ -72,6 +72,8 @@ set(XMP_ROOT ${PROJECT_SOURCE_DIR}/..)
 # setup some values before calling shared config
 include(${XMP_ROOT}/build/XMP_Config.cmake)
 
+option(XMP_BUILD_STATIC "Build XMP Toolkit as a static library" OFF)
+
 # ==============================================================================
 # Sub projects
 # ==============================================================================
